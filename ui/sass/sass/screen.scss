@@ -1,0 +1,112 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+/*
+$: #452d22;
+$bgcolor: #c3a8a8;*/
+
+$pricolor: #1f0a16;
+$bgcolor: #75bbd1;
+
+body {
+    font-size: 16pt;
+    font-family: "arial";
+}
+
+
+.btn {
+    background: rgba(1, 1, 1, 0.3);
+    color: $pricolor;
+
+    border: none;
+    @include border-radius(3px);
+    height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn.huge {
+    height: 4em;
+    padding: 1em 2em;
+}
+
+h1 {
+    display: block;
+    font-size: 250%;
+    line-height: 2em;
+    color: $pricolor;
+}
+h2 {
+    font-size: 120%;
+    line-height: 1.2em;
+}
+h3 {
+    font-size: 115%;
+    line-height: 1.15em;
+}
+
+.page {
+    @include border-radius(10px);
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background: $bgcolor;
+    padding: 0 20px 20px 20px;
+}
+
+#bigbanner {
+    color: $pricolor;
+
+    box-sizing: border-box;
+    padding: 1em;
+
+    position: relative;
+    height: 225px;
+    width: 800px;
+    background: rgba(0, 0, 0, 0.2) url('../../img/SF.jpg') no-repeat;
+
+    p {
+        position: absolute;
+        top: 0.5em;
+        bottom: 1em;
+        left: 235px;
+    }
+
+    button {
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+    }
+}
+
+.male, .female {
+    width: 225px;
+    height: 225px;
+    margin: 0 0.5em;
+    border: 1em transparent solid;
+}
+
+.footer-links {
+    width: 100%;
+
+    li {
+        a {
+            font-weight: bold;
+            font-size: 80%;
+            text-decoration: none;
+            color: $pricolor;
+        }
+        float: right;
+        display: inline-block;
+        padding: 1em 1em 0 1em;
+    }
+}
+
+.clearme {
+    clear: both;
+}

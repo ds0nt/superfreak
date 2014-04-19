@@ -1,0 +1,188 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+$: #452d22;
+$bgcolor: #c3a8a8;*/
+/* line 15, ../sass/screen.scss */
+body {
+  font-size: 16pt;
+  font-family: "arial";
+}
+
+/* line 21, ../sass/screen.scss */
+.btn {
+  background: rgba(1, 1, 1, 0.3);
+  color: #1f0a16;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 32, ../sass/screen.scss */
+.btn.huge {
+  height: 4em;
+  padding: 1em 2em;
+}
+
+/* line 37, ../sass/screen.scss */
+h1 {
+  display: block;
+  font-size: 250%;
+  line-height: 2em;
+  color: #1f0a16;
+}
+
+/* line 43, ../sass/screen.scss */
+h2 {
+  font-size: 120%;
+  line-height: 1.2em;
+}
+
+/* line 47, ../sass/screen.scss */
+h3 {
+  font-size: 115%;
+  line-height: 1.15em;
+}
+
+/* line 52, ../sass/screen.scss */
+.page {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  background: #75bbd1;
+  padding: 0 20px 20px 20px;
+}
+
+/* line 62, ../sass/screen.scss */
+#bigbanner {
+  color: #1f0a16;
+  box-sizing: border-box;
+  padding: 1em;
+  position: relative;
+  height: 225px;
+  width: 800px;
+  background: rgba(0, 0, 0, 0.2) url("../../img/SF.jpg") no-repeat;
+}
+/* line 73, ../sass/screen.scss */
+#bigbanner p {
+  position: absolute;
+  top: 0.5em;
+  bottom: 1em;
+  left: 235px;
+}
+/* line 80, ../sass/screen.scss */
+#bigbanner button {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
+/* line 87, ../sass/screen.scss */
+.male, .female {
+  width: 225px;
+  height: 225px;
+  margin: 0 0.5em;
+  border: 1em transparent solid;
+}
+
+/* line 94, ../sass/screen.scss */
+.footer-links {
+  width: 100%;
+}
+/* line 97, ../sass/screen.scss */
+.footer-links li {
+  float: right;
+  display: inline-block;
+  padding: 1em 1em 0 1em;
+}
+/* line 98, ../sass/screen.scss */
+.footer-links li a {
+  font-weight: bold;
+  font-size: 80%;
+  text-decoration: none;
+  color: #1f0a16;
+}
+
+/* line 110, ../sass/screen.scss */
+.clearme {
+  clear: both;
+}

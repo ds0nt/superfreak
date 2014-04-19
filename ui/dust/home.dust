@@ -1,0 +1,5 @@
+<div id="bigbanner">
+    <button id="startbtn" class="btn huge">Get Started</button>
+    <p class="footer">One place to try them all</p>
+    &nbsp;
+</div>

@@ -1,0 +1,3 @@
+!function(){function t(t){return t.write('<div id="bigbanner"><button id="startbtn" class="btn huge">Get Started</button><p class="footer">One place to try them all</p>&nbsp;</div>')}return dust.register("home",t),t}();
+;!function(){function t(t){return t.write('<div style="text-align: center"><button class="btn male">Male</button><button class="btn female">Female</button></div>')}return dust.register("startpg1",t),t}();
+;!function(){function t(t){return t}return dust.register("startpg2",t),t}();
