@@ -98,7 +98,7 @@ if (defined('ENVIRONMENT'))
 	// $routing['directory'] = '';
 
 	// The controller class file name.  Example:  Mycontroller
-	// $routing['controller'] = '';
+	$routing['controller'] = 'noauth';
 
 	// The controller function you wish to be called.
 	// $routing['function']	= '';
