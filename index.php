@@ -95,13 +95,13 @@ if (defined('ENVIRONMENT'))
  */
 	// The directory name, relative to the "controllers" folder.  Leave blank
 	// if your controller is not in a sub-folder within the "controllers" folder
-	$routing['directory'] = '';
+	// $routing['directory'] = '';
 
 	// The controller class file name.  Example:  Mycontroller
-	$routing['controller'] = 'Welcome';
+	// $routing['controller'] = '';
 
 	// The controller function you wish to be called.
-	$routing['function']	= '';
+	// $routing['function']	= '';
 
 
 /*
