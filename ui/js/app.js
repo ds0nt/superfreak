@@ -9,8 +9,6 @@ var startpg2 = function() {
         $('#inner-page').html(out);
 
 
-
-
         $('#done').click(function() {
             $.post('/welcome/register_post', {
                 username: username,
