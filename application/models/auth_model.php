@@ -71,7 +71,7 @@ class Auth_model extends CI_Model {
             'name' => $name
         ]);
 
-        return $this->db->insert('apps') ? $token;
+        return $this->db->insert('apps') ? $token : false;
     }
 
 }

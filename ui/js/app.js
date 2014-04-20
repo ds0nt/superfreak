@@ -10,7 +10,7 @@ var appregister = function() {
 
 
         $('#done').click(function() {
-            $.post('/superfreak/welcome/register_post', $('#appregister').serialize(), function(data) {
+            $.post('/superfreak/welcome/app_register_post', $('#appregister').serialize(), function(data) {
                 if (!data.success) {
                     alert('There was a problem registering!');
                 } else {
