@@ -1,8 +1,9 @@
 <div style="text-align: center">
-    Your token is <input type="text" value="{token}">
+    Your token is <input class="login-field"  style="width: 100%" type="text" value="{token}">
+    <div >
+        To put our button on your page simply paste this in the bottom of your page!<br/><br/>
+    </div>
 
-    To put our button on your page simply paste this in the bottom of your page!<br/><br/>
-
-    <img src="img/code.png">
+    <img style="width: 100%" src="img/code.png">
 
 </div>
