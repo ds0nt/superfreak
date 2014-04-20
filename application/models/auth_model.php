@@ -91,12 +91,8 @@ class Auth_model extends CI_Model {
         return $this->db->insert('apps') ? $token : false;
     }
 
-    public function getappid($token) {
-        // try {
-            return $this->db->query('SELECT id from apps where token = ?', [$token])->row_array()['id'];
-        // } catch (Exception $e) {
-        //     return false;
-        // }
+    public function get_app_by_token($token) {
+        return $this->db->query('SELECT * from apps where token = ?', [$token])->row_array();
     }
 
     public function app_auth($token, $username, $password) {
@@ -106,9 +102,9 @@ class Auth_model extends CI_Model {
             return false;
         }
 
-        $appid = $this->getappid($token);
+        $app = $this->get_app_by_token($token);
 
-        if (!$appid) {
+        if (empty($app)) {
             return false;
         }
 
@@ -120,9 +116,8 @@ class Auth_model extends CI_Model {
 
         $token = $this->gen_token();
 
-        echo
         $this->db->set([
-            'app_id' => $appid,
+            'app_id' => $app['id'],
             'user_id' => $user['id'],
             'token' => $token
         ]);

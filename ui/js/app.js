@@ -74,6 +74,23 @@ var home = function() {
     });
 };
 
+var authapp = function() {
+    dust.render("authapp", {
+
+    }, function(err, out) {
+        $('#inner-page').html(out);
+        $('#done').click(function() {
+            $.post('/superfreak/welcome/app_auth_post', $('#appauth').serialize(), function(data) {
+                if (!data.success) {
+                    alert('There was a problem registering!');
+                } else {
+                    $('#inner-page').append('Your token is: ' + data.token);
+                }
+            }, "json");
+        });
+    });
+};
+
 $(function() {
     home();
     $('.api-ln').click(appregister);
