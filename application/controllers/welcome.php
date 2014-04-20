@@ -14,13 +14,10 @@ class Welcome extends CI_Controller {
         $password = $this->input->post('password');
         $data = $this->input->post('data');
 
-print_r($username);
-print_r($password);
-        print_r($data);
+        // $this->load->model('auth_model');
+        // $success = $this->auth_model->create($username, $password, $data);
 
-        $this->load->model('auth_model');
-
-        $success = $this->auth_model->create($username, $password, $data);
+        $success = true;
 
         $result = [
             'success' => $success
