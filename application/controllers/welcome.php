@@ -17,14 +17,14 @@ class Welcome extends CI_Controller {
 
     public function userinfo()
     {
-        $app_token = $this->input->post('app_token');
-        $user_token = $this->input->post('user_token');
+        $app_token = $this->input->get('app_token');
+        $user_token = $this->input->get('user_token');
 
         $this->load->model('auth_model');
 
         $data = $this->auth_model->get_data($app_token, $user_token);
 
-        $this->load->view('userauth', [
+        $this->load->view('widget', [
             'username' => $data['username'],
             'data' => $data['token']
         ]);
