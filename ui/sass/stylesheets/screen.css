@@ -72,6 +72,12 @@ $: #452d22;
 $bgcolor: #c3a8a8;*/
 /* line 15, ../sass/screen.scss */
 body {
+  background:url('../img/background.jpg') #A98436 no-repeat 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+
   font-size: 14pt;
   font-family: "arial";
 }
