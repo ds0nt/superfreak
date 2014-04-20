@@ -2,5 +2,7 @@
     Your token is <input type="text" value="{token}">
 
     To put our button on your page simply paste this in the bottom of your page!<br/><br/>
-    <pre>{tokencode}</pre>
+
+    <img src="img/code.png">
+
 </div>
