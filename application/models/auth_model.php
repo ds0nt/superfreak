@@ -33,7 +33,7 @@ class Auth_model extends CI_Model {
 
     public function get_data($app_token, $user_token)
     {
-        return $this->db->query('SELECT data from users as u
+        return $this->db->query('SELECT username, data from users as u
             INNER JOIN app_users as au on au.user_id = u.id
             INNER JOIN apps as a on a.id = au.app_id
             WHERE a.token = ? AND au.token = ?', [$app_token, $user_token])->row_array();
