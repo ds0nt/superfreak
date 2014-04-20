@@ -1,6 +1,6 @@
 <form id="register" method="post" action="#">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
+    <input class="loginfield" type="text" name="username" placeholder="Username">
+    <input class="loginfield" type="password" name="password" placeholder="Password">
     <input type="number" min="0" max="100" placeholder="Height" name="data[height]" value="">
     <input type="number" min="0" max="100" placeholder="Bust" name="data[bust]" value="">
     <input type="number" min="0" max="100" placeholder="Waist" name="data[waist]" value="">
