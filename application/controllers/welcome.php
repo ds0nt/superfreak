@@ -9,7 +9,10 @@ class Welcome extends CI_Controller {
 
     public function userauth()
     {
-        $this->load->view('userauth');
+        $this->load->view('userauth', [
+            'apptoken' => $this->input->post('token'),
+            'redirect' => $this->input->post('redirect')
+        ]);
     }
 
 

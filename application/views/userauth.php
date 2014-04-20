@@ -10,6 +10,8 @@
         <h1>SuperFreak</h1>
         <div id="inner-page">
             <form action="/superfreak/welcome/app_auth_post" method="post">
+                <input type="hidden" name="app_token" value="<?php echo $apptoken ?>">
+                <input type="hidden" name="redirect" value="<?php echo $redirect ?>">
                 <input type="text" name="username">
                 <input type="password" name="password">
                 <button id="submit" type="submit"></button>
