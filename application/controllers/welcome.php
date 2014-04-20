@@ -140,4 +140,13 @@ class Welcome extends CI_Controller {
         $this->load->helper('url');
         redirect($redirect . "?token=" . $authed_token, 'location');
     }
+
+    public function stores_get()
+    {
+        $this->load->model('auth_model');
+
+        $stores = $this->auth_model->get_stores();
+
+        echo json_encode($stores);
+    }
 }

@@ -102,8 +102,31 @@ var authapp = function() {
     });
 };
 
+var stores = function() {
+    dust.render("stores", {
+
+    }, function(err, out) {
+        $('#inner-page').html(out);
+
+        $.get('/superfreak/welcome/stores_get', function(data) {
+            if (!data.success) {
+                alert('There was a problem fetching stores!');
+                return;
+            }
+
+            dust.render("stores-each", {
+                stores: data.stores
+            }, function(err, out) {
+                $('#inner-page').html(out);
+            });
+        }, "json");
+    });
+};
+
+
 $(function() {
     home();
     $('.api-ln').click(appregister);
     $('.home-ln').click(home);
+    $('.stores-ln').click(stores);
 });

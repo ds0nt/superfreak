@@ -208,3 +208,17 @@ form#register input {
 .clearme {
   clear: both;
 }
+
+/* line 140, ../sass/screen.scss */
+.store {
+  padding: 1em;
+  background: #EEE;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  margin: 1em;
+  display: inline-block;
+  color: #444;
+}

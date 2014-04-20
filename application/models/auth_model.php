@@ -128,4 +128,9 @@ class Auth_model extends CI_Model {
 
         return $token;
     }
+
+    public function get_stores()
+    {
+        return $this->db->query('SELECT name, id FROM apps')->result_array();
+    }
 }
