@@ -12,7 +12,7 @@
             <form action="/superfreak/welcome/app_auth_post" method="post">
                 <input type="hidden" name="app_token" value="<?php echo $app['token'] ?>">
                 <input type="hidden" name="redirect" value="<?php echo $redirect ?>">
-                <h1><?php echo $app['name'] ?> wants to check your measurements!</h1>
+                <h3><b><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
                 <input type="text" name="username">
                 <input type="password" name="password">
                 <button id="submit" type="submit">Get Measured!</button>
