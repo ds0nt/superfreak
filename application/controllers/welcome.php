@@ -92,6 +92,7 @@ class Welcome extends CI_Controller {
         $apptoken = $this->input->post('app_token');
         $username = $this->input->post('username');
         $password = $this->input->post('password');
+        $redirect = $this->input->post('redirect');
 
         $this->load->model('auth_model');
 
@@ -99,14 +100,13 @@ class Welcome extends CI_Controller {
 
         $result = ['success' => false];
 
-        if ($token) {
+        if ($authed_token) {
             $result = [
                 'success' => true,
-                'token' => $token
+                'token' => $authed_token
             ];
         }
 
-
-        echo json_encode($result);
+        redirect($redirect . "token=" . $authed_token);
     }
 }

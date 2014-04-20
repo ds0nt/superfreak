@@ -88,20 +88,44 @@ class Auth_model extends CI_Model {
         return $this->db->insert('apps') ? $token : false;
     }
 
-    public function app_auth($name) {
-
-        $exists = $this->db->query('SELECT * FROM apps WHERE name = ?', $name)->row_array();
-
-        if ($exists)
+    public function getappid($token) {
+        try {
+            return $this->db->query('SELECT token from apps where token = ? ', [$token])->row_array()['token'];
+        } catch (Exception $e) {
             return false;
+        }
+    }
+
+    public function app_auth($token, $username, $password) {
+        $user = $this->login($username, $password);
+
+        if (empty($user)) {
+            return false;
+        }
+
+        $appid = $this->getappid;
+
+        if (!$appid) {
+            return false;
+        }
+
+        $exists = $this->db->query('SELECT token FROM app_users WHERE id = ?', $user['id'])->row_array();
+
+        if (!empty($exists)) {
+            return $exists['token'];
+        }
 
         $token = $this->gen_token();
 
         $this->db->set([
-            'token' => $token,
-            'name' => $name
+            'app_id' => $appid,
+            'user_id' => $user['id'],
+            'token' => $token
         ]);
 
-        return $this->db->insert('apps') ? $token : false;
+        $success = $this->db->insert('app_users');
+        if (!$success)
+            return false;
+        return $token;
     }
 }
