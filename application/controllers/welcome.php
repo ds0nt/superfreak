@@ -24,6 +24,10 @@ class Welcome extends CI_Controller {
 
         $data = $this->auth_model->get_data($app_token, $user_token);
 
+        if (empty($data)) {
+            die('Evil Token is Evil!!!!');
+        }
+
         $this->load->view('widget', [
             'username' => $data['username'],
             'data' => $data['token']
