@@ -11,21 +11,24 @@
     <div class="page">
         <h1>SuperFreak</h1>
         <div id="inner-page">
-            <form style="text-align: center" action="/superfreak/welcome/app_auth_post" method="post">
+            <form style="text-align: center;" action="/superfreak/welcome/app_auth_post" method="post">
                 <input type="hidden" name="app_token" value="<?php echo $app['token'] ?>">
                 <input type="hidden" name="redirect" value="<?php echo $redirect ?>">
-                <h3 style="width: 100%; text-align: center; margin-bottom: 0.5em"><b style="font-weight: bold;"><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
+                <h3 style="width: 100%; margin-bottom: 0.5em"><b style="font-weight: bold;"><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
 
                 <style type="text/css">
-                .loginfield {
-                    display: block;
-                    height: 1.5em;
-                    padding: 0.75em;
-                    width: 50%;
-                    border: none;
-                    margin: 0.5em auto;
-                    box-sizing: border-box;
-                }
+                    .loginfield {
+                        display: block;
+                        height: 1.5em;
+                        padding: 0.75em;
+                        width: 50%;
+                        border: none;
+                        margin: 0.5em auto;
+                        box-sizing: border-box;
+                    }
+                    #inner-page .loginfield:last-child {
+                        margin-bottom: 1.5em;
+                    }
                 </style>
                 <input class="loginfield" type="text" name="username" placeholder="username">
                 <input class="loginfield" type="password" name="password" placeholder="password">
