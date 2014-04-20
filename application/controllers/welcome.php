@@ -108,6 +108,6 @@ class Welcome extends CI_Controller {
         }
 
         $this->load->helper('url');
-        redirect($redirect . "token=" . $authed_token, 'location');
+        redirect($redirect . "?token=" . $authed_token, 'location');
     }
 }

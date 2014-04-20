@@ -103,7 +103,7 @@ class Auth_model extends CI_Model {
             return false;
         }
 
-        $appid = $this->getappid;
+        $appid = $this->getappid($token);
 
         if (!$appid) {
             return false;
