@@ -115,7 +115,7 @@ var stores = function() {
             }
 
             dust.render("stores-each", {
-                stores: data.stores
+                stores: data
             }, function(err, out) {
                 $('#inner-page').html(out);
             });
