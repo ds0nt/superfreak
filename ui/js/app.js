@@ -10,11 +10,7 @@ var startpg2 = function() {
 
 
         $('#done').click(function() {
-            $.post('/welcome/register_post', {
-                username: username,
-                password: password,
-                data: data
-            }, function(data) {
+            $.post('/welcome/register_post', $('#register').serialize(), function(data) {
                 if (!data.success) {
                     alert('There was a problem registering!');
                 } else {
