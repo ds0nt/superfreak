@@ -23,7 +23,8 @@
                     padding: 0.75em;
                     width: 100%;
                     border: none;
-                    margin: 0.5em;
+                    margin: 0.5em 0;
+                    box-sizing: border-box;
                 }
                 </style>
                 <input class="loginfield" type="text" name="username" placeholder="username">
