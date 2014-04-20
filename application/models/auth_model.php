@@ -98,7 +98,6 @@ class Auth_model extends CI_Model {
 
     public function app_auth($token, $username, $password) {
         $user = $this->login($username, $password);
-        print_r($user);
 
         if (empty($user)) {
             return false;
@@ -109,7 +108,6 @@ class Auth_model extends CI_Model {
         if (!$appid) {
             return false;
         }
-        echo 'done1';
 
         $exists = $this->db->query('SELECT token FROM app_users WHERE user_id = ?', $user['id'])->row_array();
 
@@ -119,7 +117,6 @@ class Auth_model extends CI_Model {
 
         $token = $this->gen_token();
 
-        echo 'done2';
         $this->db->set([
             'app_id' => $appid,
             'user_id' => $user['id'],
@@ -129,7 +126,7 @@ class Auth_model extends CI_Model {
         $success = $this->db->insert('app_users');
         if (!$success)
             return false;
-        echo 'done';
+
         return $token;
     }
 }
