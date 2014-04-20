@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SuperFreak</title>
+    <link rel="stylesheet" type="text/css" href="sass/stylesheets/screen.css">
+</head>
+<body>
+    <div class="page">
+    <h1>SuperFreak</h1>
+    <div id="inner-page">
+        <script type="text/javascript">
+            var token = 'tVtD0EQFmn8dHWMM5r4nF6COG46NtzZCZOwlgVecPPbhJ7EMHCc8sbFcg5JVbQH3';
+            function superfreakauth() {
+                window.location = 'http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/ui/userauth?redirect=' + encodeURI(window.location.href) + '&token=' + token;
+            }
+            function superfreakinit() {
+                document.getElementById('superfreakbtn').innerHTML = '<button onclick="javascript:superfreakauth();"></button>';
+            }
+            document.addEventListener('DOMContentLoaded', superfreakinit, false);
+        </script>
+<div id="superfreakbtn"></div>
+    </div>
+        <ul class="footer-links">
+            <li><a href="#" class="home-ln">About</a></li>
+            <li><a href="#" class="home-ln">Team</a></li>
+            <li><a href="#" class="home-ln">Contact</a></li>
+            <li><a href="#" class="api-ln">Api</a></li>
+        </ul>
+        <div class="clearme"></div>
+
+    </div>
+</div>
+
+
+    <script type="text/javascript" src="js/dust.js"></script>
+    <script type="text/javascript" src="js/templates.js"></script>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

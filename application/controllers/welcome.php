@@ -77,4 +77,27 @@ class Welcome extends CI_Controller {
 
         echo json_encode($data);
     }
+
+    public function app_auth_post()
+    {
+        $apptoken = $this->input->post('app_token');
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+
+        $this->load->model('auth_model');
+
+        $authed_token = $this->auth_model->app_auth($apptoken, $username, $password);
+
+        $result = ['success' => $authed];
+
+        if ($token) {
+            $result = [
+                'success' => true,
+                'token' => $token
+            ];
+        }
+
+
+        echo json_encode($result);
+    }
 }

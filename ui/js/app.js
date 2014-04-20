@@ -77,5 +77,5 @@ var home = function() {
 $(function() {
     home();
     $('.api-ln').click(appregister);
-    $('.home-ln').click(appregister);
+    $('.home-ln').click(home);
 });

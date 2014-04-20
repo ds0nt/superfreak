@@ -88,4 +88,20 @@ class Auth_model extends CI_Model {
         return $this->db->insert('apps') ? $token : false;
     }
 
+    public function app_auth($name) {
+
+        $exists = $this->db->query('SELECT * FROM apps WHERE name = ?', $name)->row_array();
+
+        if ($exists)
+            return false;
+
+        $token = $this->gen_token();
+
+        $this->db->set([
+            'token' => $token,
+            'name' => $name
+        ]);
+
+        return $this->db->insert('apps') ? $token : false;
+    }
 }
