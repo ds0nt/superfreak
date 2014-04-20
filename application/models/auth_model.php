@@ -23,7 +23,7 @@ class Auth_model extends CI_Model {
 
     public function login($username, $password)
     {
-        return $this->db->query('SELECT username, id FROM users WHERE username = ? AND password = ?', [$username, $password])->row_array();
+        return $this->db->query('SELECT username, id FROM users WHERE username = ? AND password = ?', [$username, md5($password)])->row_array();
     }
 
     public function get_token($app_id, $user_id)
