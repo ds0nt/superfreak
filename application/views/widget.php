@@ -6,6 +6,8 @@
 </head>
 <body>
     <?php echo $username ?>
-    <?php echo $data ?>
+    <pre>
+        <?php echo print_r(json_decode($data)); ?>
+    </pre>
 </body>
 </html>
