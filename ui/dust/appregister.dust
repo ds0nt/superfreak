@@ -1,5 +1,7 @@
 <form id="appregister" method="post" action="#">
-    App Name: <input type="text" name="name">
+    <input class="loginfield" type="text" name="name" placeholder="Company Name">
 </form>
 
-<button class="btn huge" id="done">Finish</button>
+<center>
+    <button style="margin: auto" class="btn huge" id="done">Finish</button>
+</center>

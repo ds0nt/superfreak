@@ -1,5 +1,12 @@
 <div id="bigbanner">
-    <button id="startbtn" class="btn huge">Get Started</button>
-    <p class="footer">One place to try them all</p>
+    <button id="startbtn" style="color: #DDDADD;" class="btn huge">Get Started</button>
+    <p class="footer" style="color: #DDDADD; font-size: 85%; white-space: pre-wrap;">
+        Super Freak, Get Your Super Fit!<br/><br/>
+
+
+
+        Join us and let's make a difference!
+
+    </p>
     &nbsp;
 </div>
