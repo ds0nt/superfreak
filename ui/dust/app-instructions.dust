@@ -1,0 +1,4 @@
+<div style="text-align: center">
+    <button class="btn male">Male</button>
+    <button class="btn female">Female</button>
+</div>

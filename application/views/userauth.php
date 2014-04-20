@@ -26,8 +26,8 @@
                         margin: 0.5em auto;
                         box-sizing: border-box;
                     }
-                    form .loginfield:last-child {
-                        margin-bottom: 1.5em !important;
+                    form button {
+                        margin-top: 1.0em;
                     }
                 </style>
                 <input class="loginfield" type="text" name="username" placeholder="username">
