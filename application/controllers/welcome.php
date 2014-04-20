@@ -7,6 +7,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
+    public function userauth()
+    {
+        $this->load->view('userauth');
+    }
+
+
     public function register_post()
     {
         $username = $this->input->post('username');
@@ -88,7 +94,7 @@ class Welcome extends CI_Controller {
 
         $authed_token = $this->auth_model->app_auth($apptoken, $username, $password);
 
-        $result = ['success' => $authed];
+        $result = ['success' => false];
 
         if ($token) {
             $result = [
