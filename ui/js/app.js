@@ -108,7 +108,7 @@ var stores = function() {
     }, function(err, out) {
         $('#inner-page').html(out);
 
-        $.get('/superfreak/welcome/stores_get', function(data) {
+        $.get('/superfreak/welcome/stores_get', {}, function(data) {
             dust.render("stores-each", {
                 stores: data
             }, function(err, out) {
