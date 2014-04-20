@@ -20,10 +20,9 @@
                 .loginfield {
                     display: block;
                     height: 3em;
-                    padding: 0.75em;
-                    width: 100%;
+                    width: 50%;
                     border: none;
-                    margin: 0.5em 0;
+                    margin: 0.5em auto;
                     box-sizing: border-box;
                 }
                 </style>
