@@ -11,7 +11,7 @@
     <div class="page">
         <h1>SuperFreak</h1>
         <div id="inner-page">
-            <form action="/superfreak/welcome/app_auth_post" method="post">
+            <form style="text-align: center" action="/superfreak/welcome/app_auth_post" method="post">
                 <input type="hidden" name="app_token" value="<?php echo $app['token'] ?>">
                 <input type="hidden" name="redirect" value="<?php echo $redirect ?>">
                 <h3 style="width: 100%; text-align: center; margin-bottom: 0.5em"><b style="font-weight: bold;"><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
@@ -29,7 +29,7 @@
                 </style>
                 <input class="loginfield" type="text" name="username" placeholder="username">
                 <input class="loginfield" type="password" name="password" placeholder="password">
-                <button id="submit" type="submit">Get Measured!</button>
+                <button class="btn huge" id="submit" type="submit">Get Measured!</button>
             </form>
         </div>
 
