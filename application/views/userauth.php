@@ -14,7 +14,7 @@
                 <input type="hidden" name="redirect" value="<?php echo $redirect ?>">
                 <input type="text" name="username">
                 <input type="password" name="password">
-                <button id="submit" type="submit"></button>
+                <button id="submit" type="submit">Get My Measurements!</button>
             </form>
         </div>
         <ul class="footer-links">

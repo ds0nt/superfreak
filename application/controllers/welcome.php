@@ -30,7 +30,7 @@ class Welcome extends CI_Controller {
 
         $this->load->view('widget', [
             'username' => $data['username'],
-            'data' => $data['token']
+            'data' => $data['data']
         ]);
     }
 
