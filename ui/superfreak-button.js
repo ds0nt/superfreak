@@ -14,7 +14,7 @@ function superfreakinit() {
         onSuperFreakAuth(user_token);
         document.getElementById('superfreakbtn').innerHTML = '<iframe src="http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/superfreak/welcome/userinfo?app_token='+app_token+'&user_token=' + user_token + '"></iframe>';
     } else {
-        document.getElementById('superfreakbtn').innerHTML = '<button onclick="javascript:superfreakauth();"><img src="http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/ui/img/icon.png"></button>';
+        document.getElementById('superfreakbtn').innerHTML = '<button onclick="javascript:superfreakauth();"><img src="http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/ui/img/ICON.png"></button>';
     }
 }
 document.addEventListener('DOMContentLoaded', superfreakinit, false);
