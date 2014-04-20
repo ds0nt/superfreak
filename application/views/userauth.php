@@ -14,12 +14,13 @@
             <form action="/superfreak/welcome/app_auth_post" method="post">
                 <input type="hidden" name="app_token" value="<?php echo $app['token'] ?>">
                 <input type="hidden" name="redirect" value="<?php echo $redirect ?>">
-                <h3><b style="font-weight: bold;"><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
+                <h3 style="width: 100%; text-align: center"><b style="font-weight: bold;"><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
 
                 <style type="text/css">
                 .loginfield {
                     display: block;
-                    height: 3em;
+                    height: 1.5em;
+                    padding: 0.75em;
                     width: 50%;
                     border: none;
                     margin: 0.5em auto;
