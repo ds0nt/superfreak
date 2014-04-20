@@ -9,7 +9,9 @@ class Auth_model extends CI_Model {
 
     public function create($username, $password, $data)
     {
-        $this->db->where('(NOT EXISTS SELECT * FROM users where username = ?)'. $username);
+        $exists = $this->db->query('SELECT * FROM users WHERE username = ?'. $username)->row_array();
+        if ($exists)
+            return false;
         $this->db->set([
             'username' => $username,
             'password' => md5($password),
