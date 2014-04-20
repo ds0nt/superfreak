@@ -1,4 +1,7 @@
 <div style="text-align: center">
-    <button class="btn male">Male</button>
-    <button class="btn female">Female</button>
+    Your token is <input type="text" value="{token}">
+
+    To put our button on your page simply follow these instructions!
+
+    {tokencode}
 </div>

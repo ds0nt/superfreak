@@ -3,7 +3,7 @@ var data = {
 };
 
 var appinstructions = function(data) {
-    dust.render("appinstructions", {
+    dust.render("app-instructions", {
         token: data.token,
         tokencode: '<input type="hidden" id="superfreak-app-token" value="' + data.token + '">\n'+
     '<div id="superfreakbtn"></div>\n'+
