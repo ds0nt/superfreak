@@ -26,12 +26,13 @@ class Welcome extends CI_Controller {
 
     public function app_register_post()
     {
-        $username = $this->input->post('name');
+        $name = $this->input->post('name');
         $this->load->model('auth_model');
 
         $token = $this->auth_model->app_create($name);
 
         $result = ['success' => false];
+
         if ($token) {
             $result = [
                 'success' => true,
