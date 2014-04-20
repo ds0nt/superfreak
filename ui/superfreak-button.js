@@ -9,7 +9,7 @@ function superfreakauth() {
 function superfreakinit() {
     document.getElementById('superfreakbtn').innerHTML = '<button onclick="javascript:superfreakauth();">AUTH ME WITH SUPERFREAK</button>';
     var user_token = window.location.search.replace( "?token=", "" );
-    if (user_token === '')
+    if (user_token !== '')
         onSuperFreakAuth(user_token);
 }
 document.addEventListener('DOMContentLoaded', superfreakinit, false);
