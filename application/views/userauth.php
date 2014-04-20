@@ -16,9 +16,18 @@
                 <input type="hidden" name="redirect" value="<?php echo $redirect ?>">
                 <h3><b style="font-weight: bold;"><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
 
-
-                <input style="display: block; height: 3em; width: 100% border: none; margin: 0.5em" type="text" name="username" placeholder="username">
-                <input style="display: block; height: 3em; width: 100% border: none; margin: 0.5em" type="password" name="password" placeholder="password">
+                <style type="text/css">
+                .loginfield {
+                    display: block;
+                    height: 3em;
+                    padding: 0.75em;
+                    width: 100%;
+                    border: none;
+                    margin: 0.5em;
+                }
+                </style>
+                <input class="loginfield" type="text" name="username" placeholder="username">
+                <input class="loginfield" type="password" name="password" placeholder="password">
                 <button id="submit" type="submit">Get Measured!</button>
             </form>
         </div>
