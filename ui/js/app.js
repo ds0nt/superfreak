@@ -5,9 +5,9 @@ var data = {
 var appinstructions = function(data) {
     dust.render("appinstructions", {
         token: data.token,
-        tokencode: '<input type="hidden" id="superfreak-app-token" value="'+data.token+'">
-    <div id="superfreakbtn"></div>
-    <script type="text/javascript" src="http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/ui/superfreak-button.js"></script>'
+        tokencode: '<input type="hidden" id="superfreak-app-token" value="' + data.token + '">\n'+
+    '<div id="superfreakbtn"></div>\n'+
+    '<script type="text/javascript" src="http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/ui/superfreak-button.js"></script>'
     }, function(err, out) {
         $('#inner-page').html(out);
     });
