@@ -108,7 +108,7 @@ class Auth_model extends CI_Model {
             return false;
         }
 
-        $exists = $this->db->query('SELECT token FROM app_users WHERE user_id = ?', $user['id'])->row_array();
+        $exists = $this->db->query('SELECT token FROM app_users WHERE user_id = ? AND app_id = ?', [$user['id'], $app['id']])->row_array();
 
         if (!empty($exists)) {
             return $exists['token'];
