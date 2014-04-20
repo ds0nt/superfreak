@@ -13,7 +13,7 @@ class Welcome extends CI_Controller {
         $this->load->model('auth_model');
 
         $token = $this->input->get('token');
-        $data = $this->auth_model->get_app_by_token($token);
+        $app = $this->auth_model->get_app_by_token($token);
 
         $this->load->view('userauth', [
             'app' => $app,
