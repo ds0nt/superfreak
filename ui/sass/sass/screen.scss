@@ -137,6 +137,10 @@ form#register {
     clear: both;
 }
 
+.store:hover {
+    cursor: pointer;
+}
+
 .store {
     padding: 1em;
     background: #EEE;
@@ -144,4 +148,8 @@ form#register {
     margin: 1em;
     display: inline-block;
     color: #444;
+    max-width: 47%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

@@ -108,7 +108,13 @@ var stores = function() {
     }, function(err, out) {
         $('#inner-page').html(out);
 
-        $.get('/superfreak/welcome/stores_get', {}, function(data) {
+        $('.store').on('click', function() {
+            window.location = '/ui/testpg.html';
+        });
+
+        $.get('/superfreak/welcome/stores_get', {
+
+        }, function(data) {
             dust.render("stores-each", {
                 stores: data
             }, function(err, out) {
