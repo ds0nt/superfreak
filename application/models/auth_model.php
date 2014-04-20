@@ -130,7 +130,6 @@ class Auth_model extends CI_Model {
         if (!$success)
             return false;
         echo 'done';
-        die();
         return $token;
     }
 }
