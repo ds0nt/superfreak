@@ -7,7 +7,7 @@
 <body>
     <?php echo $username ?>
     <pre>
-        <?php echo print_r(json_decode($data)); ?>
+        <?php echo vardump(json_decode($data)); ?>
     </pre>
 </body>
 </html>
