@@ -10,7 +10,7 @@ var startpg2 = function() {
 
 
         $('#done').click(function() {
-            $.post('/welcome/register_post', $('#register').serialize(), function(data) {
+            $.post('/superfreak/welcome/register_post', $('#register').serialize(), function(data) {
                 if (!data.success) {
                     alert('There was a problem registering!');
                 } else {

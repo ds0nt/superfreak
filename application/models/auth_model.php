@@ -12,7 +12,7 @@ class Auth_model extends CI_Model {
         return $this->db->insert([
             'username' => $username,
             'password' => md5($password),
-            'data' => json_encode($data);
+            'data' => json_encode($data)
         ]);
     }
 
