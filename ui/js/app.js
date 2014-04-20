@@ -112,7 +112,7 @@ var stores = function() {
             dust.render("stores-each", {
                 stores: data
             }, function(err, out) {
-                $('#inner-page').html(out);
+                $('#inner-page').append(out);
             });
         }, "json");
     });
