@@ -2,6 +2,26 @@ var data = {
 
 };
 
+var appregister = function() {
+  dust.render("appregister", {
+
+    }, function(err, out) {
+        $('#inner-page').html(out);
+
+
+        $('#done').click(function() {
+            $.post('/superfreak/welcome/register_post', $('#appregister').serialize(), function(data) {
+                if (!data.success) {
+                    alert('There was a problem registering!');
+                } else {
+                    $('#inner-page').append('Your token is: ' + data.token);
+                }
+            }, "json");
+        });
+
+    });
+};
+
 var startpg2 = function() {
   dust.render("startpg2", {
 
@@ -56,4 +76,6 @@ var home = function() {
 
 $(function() {
     home();
+    $('.api-ln').click(appregister);
+    $('.home-ln').click(appregister);
 });

@@ -1,0 +1,5 @@
+<form id="appregister" method="post" action="#">
+    App Name: <input type="text" name="name">
+</form>
+
+<button class="btn huge" id="done">Finish</button>

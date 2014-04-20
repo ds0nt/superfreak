@@ -7,7 +7,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
-
     public function register_post()
     {
         $username = $this->input->post('username');
@@ -15,13 +14,31 @@ class Welcome extends CI_Controller {
         $data = $this->input->post('data');
 
         $this->load->model('auth_model');
-        $success = $this->auth_model->create($username, $password, $data);
 
-        $success = true;
+        $success = $this->auth_model->create($username, $password, $data);
 
         $result = [
             'success' => $success
         ];
+
+        echo json_encode($result);
+    }
+
+    public function app_register_post()
+    {
+        $username = $this->input->post('name');
+        $this->load->model('auth_model');
+
+        $token = $this->auth_model->app_create($name);
+
+        $result = ['success' => false];
+        if ($token) {
+            $result = [
+                'success' => true,
+                'token' => $token
+            ];
+        }
+
 
         echo json_encode($result);
     }
@@ -55,7 +72,8 @@ class Welcome extends CI_Controller {
         $token = $this->input->get('token');
 
         $this->load->model('auth_model');
-        $this->auth_model->get_data($app_id, $token);
-    }
+        $data = $this->auth_model->get_data($app_id, $token);
 
+        echo json_encode($data);
+    }
 }

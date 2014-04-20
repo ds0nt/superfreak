@@ -12,6 +12,7 @@ class Auth_model extends CI_Model {
         $exists = $this->db->query('SELECT * FROM users WHERE username = ?', $username)->row_array();
         if ($exists)
             return false;
+
         $this->db->set([
             'username' => $username,
             'password' => md5($password),
@@ -38,6 +39,39 @@ class Auth_model extends CI_Model {
     function update_entry()
     {
         $this->db->update('entries', $this, array('id' => $_POST['id']));
+    }
+
+
+    /**
+     * Create a token for storage
+     */
+    public function gen_token($len = 64)
+    {
+        $token = "";
+        $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $codeAlphabet.= "abcdefghijklmnopqrstuvwxyz";
+        $codeAlphabet.= "0123456789";
+        for ($i=0; $i<$len; $i++) {
+            $token .= $codeAlphabet[$this->crypto_rand_secure(0,strlen($codeAlphabet))];
+        }
+        return $token;
+    }
+
+    public function app_create($name) {
+
+        $exists = $this->db->query('SELECT * FROM apps WHERE name = ?', $name)->row_array();
+
+        if ($exists)
+            return false;
+
+        $token = $this->gen_token();
+
+        $this->db->set([
+            'token' => $token,
+            'name' => $name
+        ]);
+
+        return $this->db->insert('apps') ? $token;
     }
 
 }
