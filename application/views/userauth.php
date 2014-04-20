@@ -17,15 +17,6 @@
                 <h3 style="width: 100%; margin-bottom: 0.5em"><b style="font-weight: bold;"><?php echo $app['name'] ?></b> wants to check your measurements!</h3>
 
                 <style type="text/css">
-                    .loginfield {
-                        display: block;
-                        height: 1.5em;
-                        padding: 0.75em;
-                        width: 50%;
-                        border: none;
-                        margin: 0.5em auto;
-                        box-sizing: border-box;
-                    }
                     form button {
                         margin-top: 1.0em;
                     }
