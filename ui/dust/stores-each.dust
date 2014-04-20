@@ -1,4 +1,3 @@
-
-{stores}
-<div class="store" data-id="{id}">{name}</div>
+{#stores}
+    <div class="store" data-id="{id}">{name}</div>
 {/stores}
