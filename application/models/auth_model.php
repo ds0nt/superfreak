@@ -92,11 +92,11 @@ class Auth_model extends CI_Model {
     }
 
     public function getappid($token) {
-        try {
-            return $this->db->query('SELECT token from apps where token = ? ', [$token])->row_array()['token'];
-        } catch (Exception $e) {
-            return false;
-        }
+        // try {
+            return $this->db->query('SELECT token from apps where token = ?', [$token])->row_array()['token'];
+        // } catch (Exception $e) {
+        //     return false;
+        // }
     }
 
     public function app_auth($token, $username, $password) {
