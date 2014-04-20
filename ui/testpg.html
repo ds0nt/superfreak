@@ -2,28 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SuperFreak</title>
+    <title>Test Shop</title>
     <link rel="stylesheet" type="text/css" href="sass/stylesheets/screen.css">
 </head>
 <body>
     <div class="page">
-    <h1>SuperFreak</h1>
-    <div id="inner-page">
-        <script type="text/javascript">
-            var token = 'tVtD0EQFmn8dHWMM5r4nF6COG46NtzZCZOwlgVecPPbhJ7EMHCc8sbFcg5JVbQH3';
-            function superfreakauth() {
-                window.location = 'http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/superfreak/welcome/userauth?redirect=' + encodeURI(window.location.href) + '&token=' + token;
-            }
-            function superfreakinit() {
-                document.getElementById('superfreakbtn').innerHTML = '<button onclick="javascript:superfreakauth();"></button>';
-            }
-            document.addEventListener('DOMContentLoaded', superfreakinit, false);
-        </script>
-        <div id="superfreakbtn"></div>
-    </div>
+        <h1>Test Shop</h1>
+        <div id="inner-page">
+            <div id="superfreakbtn"></div>
+        </div>
         <div class="clearme"></div>
-
     </div>
+    <script type="text/javascript" src="http://ec2-54-254-252-98.ap-southeast-1.compute.amazonaws.com/ui/superfreak-button.js"></script>
 </div>
 </body>
 </html>
